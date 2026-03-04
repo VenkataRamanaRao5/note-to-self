@@ -6,4 +6,4 @@
 https://dev.to/dvddpl/why-is-my-regex-working-intermittently-4f4g  
 Then again, the idiot was me, because the global flag is to search for matches beyond the first match, while what I wanted was multiline matching. I could just replace the \s* part with \n. But I found [\s\S] that hacks around . not matching \n. Learnt something 👍.
 
--
+- React navigation is interesting. Github copilot is interesting. It dives into the rusting implementation of a library to figure out an error. Claude sonnet 4.6 https://github.com/VenkataRamanaRao5/cbsa-app/pull/2 . Also, write workflows for build process, it makes life easier than running build everytime locally. 
