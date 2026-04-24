@@ -42,6 +42,12 @@ Then again, the idiot was me, because the global flag is to search for matches b
 ## Scala 
 
 - There is whole `combinations` method on collections!! I thought I was being creative and brilliant to use tails for an upper traingular traversal. I had come up with a convoluted but clever way to build an adjacency list based on a predicate with tails and flatMap. I'll admit the nested flatmaps were unnecessarily complicated, but I made it work with tails which I thought was the best way. I asked claude because I was skeptical. It hit me in the face with the [`combinations` method](https://www.scala-lang.org/api/current/scala/collection/ArrayOps.html#combinations-fffffbef). Apparently, there is already a built-in method to list out all the unique combinations of a given length. Woah. Woaaah. I could just collect over it. Or filter + flatMap. Damn.
+- There is one more equally mind-blowing thing I didn't know: I can do `Seq(w1, w2)`. Woooooaaah. A bigger example.
+```
+listOfString.combinations(2).collect{ case Seq(w1, w2) => ??? }
+```
+
+`combinations` returns `Iterator[Collection[Type]]`. If I'm iterating over a `combinations(2)`, I'd have Collection of 2 elements instead of a 2-tuple which would be more convenient. But `case Seq(x, y)` solves that. Damn, I remember atleast one instance where I used `e => e(0) op e(1)` in a similar situation. `combinations` returning Collection instead of tuple makes sense because the length of the combination is variable. DAaamn.
 
 ## LLMs
 
