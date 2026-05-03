@@ -39,6 +39,8 @@ Then again, the idiot was me, because the global flag is to search for matches b
   
   So, basically useless for creating multi-dimensional lists.
 
+- In [bisect library](https://docs.python.org/3/library/bisect.html), there are `bisect_left` and `bisect_right` functions that searches for an index using binary search. Good, I don't have to write binary search myself.
+
 ## Scala 
 
 - There is whole `combinations` method on collections!! I thought I was being creative and brilliant to use tails for an upper traingular traversal. I had come up with a convoluted but clever way to build an adjacency list based on a predicate with tails and flatMap. I'll admit the nested flatmaps were unnecessarily complicated, but I made it work with tails which I thought was the best way. I asked claude because I was skeptical. It hit me in the face with the [`combinations` method](https://www.scala-lang.org/api/current/scala/collection/ArrayOps.html#combinations-fffffbef). Apparently, there is already a built-in method to list out all the unique combinations of a given length. Woah. Woaaah. I could just collect over it. Or filter + flatMap. Damn.
