@@ -51,6 +51,6 @@ listOfString.combinations(2).collect{ case Seq(w1, w2) => ??? }
 
 `combinations` returns `Iterator[Collection[Type]]`. If I'm iterating over a `combinations(2)`, I'd have Collection of 2 elements instead of a 2-tuple which would be more convenient. But `case Seq(x, y)` solves that. Damn, I remember atleast one instance where I used `e => e(0) op e(1)` in a similar situation. `combinations` returning Collection instead of tuple makes sense because the length of the combination is variable. DAaamn.
 
-## LLMs
+## Misc
 
-- Not exactly a note, but gemini pro made an actual typo. 
+- I was trying to use scrcpy in wsl in my 4GB RAM i3 10th Gen laptop. I did `sudo apt update` and `sudo install adb`. Then `sudo install scrcpy`. It installed version 28. But I had version 34 in my 8GB i5 laptop somehow. I had different 22.04 LTS here and 24.04 LTS there. There. I then wgetted and unzipped from google. But I ran into the exact issue as described in [this stack overflow post](https://stackoverflow.com/questions/79630511/adb-returns-error-unknown-host-service-when-pairing-device-using-scrcpy-wirel) and the OP themself had posted the solution and it rusting worked!
